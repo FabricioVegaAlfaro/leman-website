@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEMAN Consultores - Expertos en Sistemas de Gestión ISO 9000</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Colores personalizados del logo */
+        :root {
+            --leman-red: #E8433E;
+            --leman-blue: #3B5998;
+        }
+        .text-leman-red { color: var(--leman-red); }
+        .text-leman-blue { color: var(--leman-blue); }
+        .bg-leman-red { background-color: var(--leman-red); }
+        .bg-leman-blue { background-color: var(--leman-blue); }
+        .border-leman-blue { border-color: var(--leman-blue); }
+        .border-leman-red { border-color: var(--leman-red); }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ========== ENCABEZADO Y NAVEGACIÓN ========== -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-12 w-auto" src="LOGO LEMAN.jpg" alt="Logo LEMAN Consultores" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/200x50/3B5998/FFFFFF?text=LEMAN';">
+                </div>
+                
+                <!-- Navegación de Escritorio -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-leman-blue inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-leman-blue font-medium">Inicio</a>
+                    <a href="#servicios" class="text-gray-700 hover:text-leman-blue inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-leman-blue font-medium">Servicios</a>
+                    <a href="#nosotros" class="text-gray-700 hover:text-leman-blue inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-leman-blue font-medium">Nosotros</a>
+                    <a href="#proyectos" class="text-gray-700 hover:text-leman-blue inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-leman-blue font-medium">Proyectos</a>
+                    <!-- NUEVO LINK NOTICIAS -->
+                    <a href="#noticias" class="text-gray-700 hover:text-leman-blue inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-leman-blue font-medium">Noticias</a>
+                    <a href="#contacto" class="bg-leman-blue text-white inline-flex items-center px-4 py-2 my-auto rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors">
+                        Contacto
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-leman-blue" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <!-- Icono Hamburguesa -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Icono 'X' (cerrar) -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Menú Móvil -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-4 space-y-1">
+                <a href="#inicio" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-700 hover:bg-gray-100 hover:border-leman-blue">Inicio</a>
+                <a href="#servicios" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-700 hover:bg-gray-100 hover:border-leman-blue">Servicios</a>
+                <a href="#nosotros" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-700 hover:bg-gray-100 hover:border-leman-blue">Nosotros</a>
+                <a href="#proyectos" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-700 hover:bg-gray-100 hover:border-leman-blue">Proyectos</a>
+                <!-- NUEVO LINK NOTICIAS (MÓVIL) -->
+                <a href="#noticias" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-700 hover:bg-gray-100 hover:border-leman-blue">Noticias</a>
+                <a href="#contacto" class="block w-full text-left pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-leman-blue hover:bg-opacity-90">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== SECCIÓN HERO ========== -->
+    <main>
+        <div id="inicio" class="relative bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative py-16 md:py-24 lg:py-32">
+                    <div classs="max-w-3xl mx-auto text-center">
+                        <span class="text-leman-blue font-semibold uppercase tracking-wider">LEMAN CONSULTORES</span>
+                        <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                            Consultoría ISO 9001:
+                            <span class="block text-leman-red">Más Allá de los Requisitos</span>
+                        </h1>
+                        <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
+                            Diseñamos sistemas de gestión eficaces basados en el Modelo Lemán®, conforme los requisitos de la norma ISO 9001; enfocados en el desempeño, la cultura y la transformación real de su organización.
+                        </p>
+                        <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#contacto" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg shadow-md text-white bg-leman-blue hover:bg-opacity-90 transition-colors">
+                                Solicitar Diagnóstico
+                            </a>
+                            <a href="#nosotros" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+                                Conocer el Modelo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SECCIÓN SERVICIOS ========== -->
+        <section id="servicios" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-leman-blue font-semibold uppercase tracking-wider">Nuestros Servicios</span>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+                        Soluciones Integrales de Gestión
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Guiamos a su organización en cada etapa del proceso hacia la certificación y la mejora continua.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Servicio 1: Diagnóstico -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
+                        <img class="h-56 w-full object-cover" 
+                             src="https://placehold.co/600x400/3B5998/FFFFFF?text=Diagn%C3%B3stico+ISO+9001" 
+                             alt="Imagen de un diagnóstico de sistema de gestión">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">1. Diagnóstico y Planificación</h3>
+                            <p class="mt-3 text-gray-600">
+                                Analizamos la situación actual de su organización frente al Modelo Lemán® en conformidad con los rerquisitos de la norma ISO 9001. Elaboramos un plan de trabajo detallado y realista para cerrar las brechas.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Servicio 2: Implementación -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
+                         <img class="h-56 w-full object-cover" 
+                             src="https://placehold.co/600x400/E8433E/FFFFFF?text=Implementaci%C3%B3n+SGC" 
+                             alt="Imagen de un equipo implementando un sistema de gestión">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">2. Diseño e Implementación SGC</h3>
+                            <p class="mt-3 text-gray-600">
+                                Co-diseñamos su Sistema de Gestión de Calidad (SGC) de forma ágil y simple, asegurando que sea una herramienta útil para su operación y no solo un requisito.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3: Capacitación -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
+                         <img class="h-56 w-full object-cover" 
+                             src="https://placehold.co/600x400/3B5998/FFFFFF?text=Capacitaci%C3%B3n+ISO" 
+                             alt="Imagen de una sesión de capacitación en normas ISO">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">3. Capacitación y Sensibilización</h3>
+                            <p class="mt-3 text-gray-600">
+                                Formamos a sus colaboradores en todos los niveles sobre los principios de la calidad y el funcionamiento del SGC, asegurando su adopción y compromiso.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4: Auditoría Interna -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
+                         <img class="h-56 w-full object-cover" 
+                             src="https://placehold.co/600x400/E8433E/FFFFFF?text=Auditor%C3%ADa+Interna" 
+                             alt="Imagen de una auditoría interna de calidad">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">4. Auditorías Internas</h3>
+                            <p class="mt-3 text-gray-600">
+                                Realizamos auditorías internas objetivas e independientes para verificar la conformidad y eficacia del SGC, preparando a su equipo para la auditoría de certificación.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 5: Acompañamiento -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
+                         <img class="h-56 w-full object-cover" 
+                             src="https://placehold.co/600x400/3B5998/FFFFFF?text=Certificaci%C3%B3n" 
+                             alt="Imagen de un certificado ISO 9001">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">5. Acompañamiento en Certificación</h3>
+                            <p class="mt-3 text-gray-600">
+                                Le brindamos soporte estratégico y técnico durante la auditoría externa de certificación, asegurando un proceso fluido y exitoso.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 6: Mantenimiento -->
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
+                         <img class="h-56 w-full object-cover" 
+                             src="https://placehold.co/600x400/E8433E/FFFFFF?text=Mejora+Continua" 
+                             alt="Imagen de un ciclo de mejora continua">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900">6. Mantenimiento y Mejora</h3>
+                            <p class="mt-3 text-gray-600">
+                                Ofrecemos servicios de outsourcing y seguimiento para el mantenimiento y la mejora continua de su SGC, asegurando que evolucione con su negocio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN NOSOTROS (Modelo Lemán + Fundador) ========== -->
+        <section id="nosotros" class="py-16 md:py-24 bg-white">
+            <!-- Bloque Modelo Lemán -->
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Video "Modelo" -->
+                    <div class="rounded-lg shadow-xl overflow-hidden">
+                        <div class="relative" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full"
+                                src="https://www.youtube.com/embed/B3ARct-zcjs" 
+                                title="Difusión del Modelo Lemán" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Texto "Modelo" -->
+                    <div class="text-center md:text-left">
+                        <span class="text-leman-blue font-semibold uppercase tracking-wider">Nuestra Filosofía</span>
+                        <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+                            El Modelo Lemán®
+                        </h2>
+                        <p class="mt-6 text-lg text-gray-600">
+                            Presentado en el libro <strong>"ISO 9001: Más allá de los requisitos"</strong> (2021), nuestro modelo se basa en la familia de normas ISO 9000, pero va un paso adelante.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Mientras las normas ISO son revisadas y el mundo avanza, transformamos el Modelo Lemán® para que siga siendo una herramienta de gestión amigable, preparada para la disrupción y el cambio cultural.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Esta versión simplificada presenta una narración de la <strong>fisiología del sistema de gestión</strong> (su comportamiento en conjunto), más allá́ de sus requisitos anatómicos descritos en la norma ISO 9001:2015.
+                        </p>
+                        <ul class="mt-6 space-y-4 text-left">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700"><strong>Foco en la Eficacia:</strong> Menos en la certificación y más en un modelo de gestión comprensible y eficaz.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700"><strong>Mejora del Desempeño:</strong> Genera ideas relevantes para mejorar el funcionamiento y el plan de cambio.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700"><strong>Visión Integral:</strong> Satisface las necesidades de las partes interesadas y desarrolla a los colaboradores.</span>
+                            </li>
+                        </ul>
+                        <p class="mt-6 text-gray-600 italic">
+                            "Bienvenidos a esta nueva visión de las normas ISO 9001; que nos lleva más allá de los requisitos y más cerca de los resultados..."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque Fundador -->
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-16 md:mt-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Texto "Fundador" -->
+                    <div class="text-center md:text-left">
+                        <span class="text-leman-blue font-semibold uppercase tracking-wider">Nuestro Fundador</span>
+                        <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+                            Edgar Mora Escalante
+                        </h2>
+                        <p class="mt-6 text-lg text-gray-600">
+                            Creador del <strong>Modelo Lemán®</strong> y Presidente Fundador de Lemán® & Asociados. Es un reconocido consultor en normalización técnica y autor del libro "ISO 9001: Más allá de los requisitos".
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Ingeniero Civil con vasta experiencia como Director de Proyectos en infraestructura y energías renovables, especialista en gestión de la calidad (ISO 9000) y supervisión de obras (ACI).
+                        </p>
+                        <ul class="mt-6 space-y-4 text-left">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Miembro del comité <strong>176 INTECO/ISO</strong>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Evaluador del Esquema <strong>Marca País Esencial Costa Rica</strong>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Reconocido con el <strong>Premio de Innovación y Creatividad OMPI 2013</strong>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Conferencista internacional y divulgador en sistemas de gestión.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Imagen "Fundador" (Placeholder) -->
+                    <div class="order-first md:order-last"> <!-- Invierto el orden en móvil -->
+                        <img src="https://placehold.co/600x450/EFEFEF/3B5998?text=Edgar+Mora+E." 
+                             alt="Retrato de Edgar Mora Escalante, Fundador de LEMAN Consultores" 
+                             class="rounded-lg shadow-xl object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN PROYECTOS ========== -->
+        <section id="proyectos" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-leman-blue font-semibold uppercase tracking-wider">Experiencia Comprobada</span>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+                        Proyectos Destacados
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Hemos tenido el privilegio de colaborar con organizaciones líderes en diversos sectores e industrias.
+                    </p>
+                </div>
+
+                <div class="mt-16 max-w-5xl mx-auto">
+                    <ul class="space-y-8">
+                        <!-- Proyecto 1 -->
+                        <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-blue text-lg md:w-1/4">Rapibox (2024-2025)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1">Consultor para la certificación del Sistema de Gestión de Calidad (ISO 9001:2015).</span>
+                        </li>
+                        <!-- Proyecto 2 -->
+                        <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-blue text-lg md:w-1/4">ASADA Tacares Sur (2024-2025)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1">Consultor para la certificación del Sistema de Gestión de Calidad (ISO 9001:2015).</span>
+                        </li>
+                        <!-- Proyecto 3 -->
+                        <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-blue text-lg md:w-1/4">ALIAXIS (Perú, 2024)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1">Capacitación en Modelo Lemán y auditoría tri-norma.</span>
+                        </li>
+                        <!-- Proyecto 4 -->
+                        <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-blue text-lg md:w-1/4">LSQA (Varios países, 2023)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1">Capacitador en sistemas de gestión y auditoría (ISO 9000, 5001, 55001, 19011).</span>
+                        </li>
+                        <!-- Proyecto 5 -->
+                        <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-red text-lg md:w-1/4">Grupo Gloria (Perú, 2021-2023)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1"><strong>CALCESUR:</strong> Rediseño SGI (9001, 45001, 14001), Diseño SGE (50001), SGA (55001) e implementación EFQM.</span>
+                        </li>
+                        <!-- Proyecto 6 -->
+                         <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-red text-lg md:w-1/4">Grupo Gloria (Perú, 2022)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1"><strong>Cementos YURA:</strong> Diagnóstico del Sistema de Gestión Integrado.</span>
+                        </li>
+                        <!-- Proyecto 7 -->
+                        <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-blue text-lg md:w-1/4">FOMENTO URBANO (CR, 2008)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1">Diseño e implementación de SGC (ISO 9001).</span>
+                        </li>
+                        <!-- Proyecto 8 -->
+                        <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-blue text-lg md:w-1/4">HOLCIM (Costa Rica, 2008)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1">Diseño de sistema de gestión para certificación de producto.</span>
+                        </li>
+                        <!-- Proyecto 9 -->
+                        <li class="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:space-x-6">
+                            <span class="font-bold text-leman-blue text-lg md:w-1/4">INTACO (Costa Rica, 2008)</span>
+                            <span class="text-gray-700 mt-2 md:mt-0 md:flex-1">Diseño de sistema de gestión para certificación de producto (Mortero).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== NUEVA SECCIÓN NOTICIAS ========== -->
+        <section id="noticias" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-leman-blue font-semibold uppercase tracking-wider">Noticias y Reconocimientos</span>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+                        Nuestros Clientes en las Noticias
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Nos enorgullece ver el éxito de nuestros clientes. Sus logros son un testimonio del poder de un sistema de gestión bien implementado.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Tarjeta de Noticia 1 -->
+                    <div class="flex flex-col bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
+                        <img class="h-56 w-full object-cover" 
+                             src="https://placehold.co/600x400/3B5998/FFFFFF?text=ASADA+Tacares+Sur" 
+                             alt="Noticia sobre ASADA Tacares Sur y su certificación ISO 9001">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">ASADA de Tacares Sur Recibe Certificación Internacional</h3>
+                            <p class="mt-3 text-gray-600 flex-1">
+                                ¡Felicitaciones a la ASADA de Tacares Sur (cliente 2024-2025) por obtener su certificación ISO 9001:2015! Un hito que refleja su compromiso con la calidad.
+                            </p>
+                            <div class="mt-6">
+                                <a href="https://www.facebook.com/grecia.go.cr/posts/asada-de-tacares-sur-recibe-certificaci%C3%B3n-internacionalel-alcalde-municipal-dona/1298605138973948/" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="inline-block bg-leman-blue text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors">
+                                    Leer Más &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aquí se pueden añadir más tarjetas de noticias en el futuro -->
+                    <div class="flex flex-col bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 opacity-60">
+                        <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/E8433E/FFFFFF?text=Pr%C3%B3xima+Noticia" alt="Próxima Noticia">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-gray-900">Próximo Evento o Noticia</h3>
+                            <p class="mt-3 text-gray-600 flex-1">
+                                Esta área está lista para mostrar su próximo gran logro o un artículo sobre el Modelo Lemán®.
+                            </p>
+                            <div class="mt-6">
+                                <span class="inline-block bg-gray-300 text-gray-600 px-5 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
+                                    Próximamente
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========== SECCIÓN AYUDA IA (con Gemini API) ========== -->
+        <!-- SECCIÓN ELIMINADA -->
+
+
+        <!-- ========== SECCIÓN CONTACTO ========== -->
+        <section id="contacto" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Información de Contacto -->
+                    <div>
+                        <span class="text-leman-blue font-semibold uppercase tracking-wider">Hablemos</span>
+                        <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+                            Inicie su Transformación
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Complete el formulario o contáctenos directamente para agendar un diagnóstico sin costo. Estamos listos para llevar su organización "más allá de los requisitos".
+                        </p>
+                        <div class="mt-8 space-y-4">
+                            <div class="flex items-center">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                </svg>
+                                <span class="ml-3 text-lg text-gray-700">visionl3man@gmail.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.211-.998-.552-1.348l-3.235-3.235a2.25 2.25 0 00-3.182 0l-1.33 1.33a1.875 1.875 0 01-2.332-.518 13.385 13.385 0 01-4.434-4.434 1.875 1.875 0 01-.518-2.332l1.33-1.33a2.25 2.25 0 000-3.182L5.598 3.102A2.25 2.25 0 004.25 2.552H2.877a2.25 2.25 0 00-2.25 2.25v1.95z" />
+                                </svg>
+                                <span class="ml-3 text-lg text-gray-700">(+506) 63222840</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="flex-shrink-0 h-6 w-6 text-leman-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                </svg>
+                                <span class="ml-3 text-lg text-gray-700">San José, Costa Rica</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <form action="#" method="POST" class="bg-gray-50 p-8 rounded-lg shadow-lg space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                            <div class="mt-1">
+                                <input type="text" name="name" id="name" autocomplete="name" class="py-3 px-4 block w-full shadow-sm rounded-md border-gray-300 focus:ring-leman-blue focus:border-leman-blue">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700">Empresa</label>
+                            <div class="mt-1">
+                                <input type="text" name="company" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-sm rounded-md border-gray-300 focus:ring-leman-blue focus:border-leman-blue">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <div class="mt-1">
+                                <input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm rounded-md border-gray-300 focus:ring-leman-blue focus:border-leman-blue">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                            <div class="mt-1">
+                                <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm rounded-md border-gray-300 focus:ring-leman-blue focus:border-leman-blue"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-lg text-white bg-leman-blue hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-leman-blue transition-colors">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo e Info -->
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <img class="h-10 w-auto mx-auto md:mx-0" src="LOGO LEMAN.jpg" alt="Logo LEMAN Consultores" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/180x45/3B5998/FFFFFF?text=LEMAN';">
+                    <p class="mt-4 text-sm">Más allá de los requisitos.</p>
+                </div>
+                <!-- Links Footer y Redes Sociales -->
+                <div class="flex flex-col items-center md:items-end space-y-4">
+                    <!-- Links de Navegación del Footer -->
+                    <div class="flex space-x-6">
+                        <a href="#servicios" class="text-sm hover:text-white transition-colors">Servicios</a>
+                        <a href="#nosotros" class="text-sm hover:text-white transition-colors">Nosotros</a>
+                        <a href="#proyectos" class="text-sm hover:text-white transition-colors">Proyectos</a>
+                        <a href="#noticias" class="text-sm hover:text-white transition-colors">Noticias</a>
+                        <a href="#contacto" class="text-sm hover:text-white transition-colors">Contacto</a>
+                    </div>
+                    <!-- Icono de Redes Sociales -->
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/edgar-m-3122ba376/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn de Edgar Mora">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <!-- Aquí puedes añadir más iconos de redes sociales en el futuro -->
+                        <!-- 
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a> 
+                        -->
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; <span id="current-year">2024</span> LEMAN Consultores. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== MODAL PARA AYUDA IA ========== -->
+    <!-- MODAL ELIMINADO -->
+
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        // --- Script para el menú móvil ---
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = menuButton.querySelector('svg:nth-child(1)');
+        const closeIcon = menuButton.querySelector('svg:nth-child(2)');
+
+        menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // --- Script para el año actual en el footer ---
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // --- Lógica de Modal y Gemini API ---
+        // --- CÓDIGO ELIMINADO ---
+
+    </script>
+
+</body>
+</html>
