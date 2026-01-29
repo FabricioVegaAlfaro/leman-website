@@ -397,10 +397,13 @@
                 <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <!-- Tarjeta de Noticia 1 -->
                     <div class="flex flex-col bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
-                        <img
-                            src="Certificacion_ASADA_Tacares.jpeg"
-                            alt="Alcalde de Grecia y representantes de la Junta Directiva de la ASADA durante la certificación ISO 9001"
-                            class="w-full h-65 object-cover object-top">
+                        <div class="w-full h-[724px] overflow-hidden">
+                            <img
+                                src="Certificacion_ASADA_Tacares.jpeg"
+                                alt="Certificación ASADA Tacares Sur"
+                                class="w-full h-full object-cover object-center">
+                        </div>
+
                         <div class="px-4 py-2 bg-white text-sm text-gray-600 italic border-b">
                             En la fotografía el Alcalde de Grecia don Donald Quesada y representantes de la Junta Directiva de la ASADA.
                         </div>
@@ -423,10 +426,15 @@
 
                     <!-- Tarjeta de Noticia 2 -->
                     <div class="flex flex-col bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
-                        <img
-                            src="Certificacion_Rapibox.jpeg"
-                            alt="Alcalde de Grecia y representantes de la Junta Directiva de la ASADA durante la certificación ISO 9001"
-                            class="w-full h-65 object-cover object-top">
+                        <div class="w-full h-[724px] overflow-hidden">
+                            <img
+                                src="Certificacion_Rapibox.jpg"
+                                alt="Gerente general de RAPIBOX"
+                                class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="px-4 py-2 bg-white text-sm text-gray-600 italic border-b">
+                            En la fotografía el gerente general de RAPIBOX, Ing. Manrique Jenkings
+                        </div>
 
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-bold text-gray-900">Empresa Rapibox Recibe Certificación de Sistemas de Gestión de Calidad</h3>
@@ -453,8 +461,16 @@
                     </div>
 
                     <!-- Aquí se pueden añadir más tarjetas de noticias en el futuro -->
-                    <div class="flex flex-col bg-gray-50 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 opacity-60">
-                        <img class="h-70 w-full object-cover" src="https://placehold.co/600x400/E8433E/FFFFFF?text=Pr%C3%B3xima+Noticia" alt="Próxima Noticia">
+                    <div class="flex flex-col bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+    
+                        <!-- BLOQUE SUPERIOR (1024px) -->
+                        <div class="w-full h-[724px] bg-[#F59A9A] flex items-center justify-center">
+                            <span class="text-white text-3xl font-semibold">
+                                Próxima Noticia
+                            </span>
+                        </div>
+
+                        <!-- CONTENIDO -->
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-bold text-gray-900">Próximo Evento o Noticia</h3>
                             <p class="mt-3 text-gray-600 flex-1">
@@ -466,6 +482,7 @@
                                 </span>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
